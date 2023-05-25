@@ -24,6 +24,9 @@ public class StudentService {
                 "Hiker, Programmer and Architect", new ArrayList<>(List.of(courseOne, courseTwo)));
 
         students.add(ranga);
+        
+        Student slava = new Student("Student2", "Slava Lapitski",
+                "Hiker, Programmer and Architect", new ArrayList<>(List.of(courseOne)));
     }
 
     public Student retrieveStudent(String studentId) {
