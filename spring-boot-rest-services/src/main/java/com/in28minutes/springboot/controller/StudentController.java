@@ -32,6 +32,7 @@ public class StudentController {
     public ResponseEntity<Void> registerStudentForCourse(@PathVariable String studentId,
                                                          @RequestBody Course newCourse) {
 
+        System.out.println("student: " + studentId + " course " + newCourse.toString());
         Course course = studentService.addCourse(studentId, newCourse);
 
         if (course == null)
@@ -49,6 +50,7 @@ public class StudentController {
     public Course retrieveDetailsForCourse(@PathVariable String studentId,
                                            @PathVariable String courseId) {
 
+        System.out.println("student: " + studentId + " course " + newCourse.toString());
         return studentService.retrieveCourse(studentId, courseId);
     }
 
