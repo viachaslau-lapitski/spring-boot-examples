@@ -24,8 +24,8 @@ public class SecurityConfig {
     @Bean
     public InMemoryUserDetailsManager createUserDetailsManager() {
         UserDetails userDetails1 = createNewUser("admin1", "secret1");
-
-        return new InMemoryUserDetailsManager(userDetails1);
+        UserDetails userDetails2 = createNewUser("admin2", "secret2");
+        return new InMemoryUserDetailsManager(userDetails1, userDetails1);
     }
 
     private UserDetails createNewUser(String username, String password) {
